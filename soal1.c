@@ -36,7 +36,7 @@ void PushBack(int WaktuTunggu, char *ID) {
 void Display(){
     Node* Current = Head;
     while(Current != NULL){
-        printf("%s ", Current->ID);
+        printf(" %s", Current->ID);
         Current = Current->next;
     }
 }
@@ -54,14 +54,15 @@ int main() {
     int N, TempWaktuTunggu;
     char TempID[10];
     int WaktuTungguTotal;
+    
     scanf("%d", &N);
 
-    while(N--){
-        scanf("%s %d", TempID, &TempWaktuTunggu);
+    for(int i = 0; i < N; i++){
+        scanf("%s%d", TempID, &TempWaktuTunggu);
         PushBack(TempWaktuTunggu, TempID);
     }
-
-    printf("ORDER ");
+    
+    printf("ORDER");
     Display();
 
     WaktuTungguTotal = HitungWaktuTotal();
