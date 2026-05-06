@@ -53,23 +53,19 @@ int HitungWaktuTotal(){
 int main() {
     int N, TempWaktuTunggu;
     char TempID[10];
-    int i = 0;
     int WaktuTungguTotal;
-    printf("ORDER ");
     scanf("%d", &N);
-    printf("%d", N);
-    printf("ORDER ");
 
-    while(i < N){
-        scanf("%s %d", TempID, TempWaktuTunggu);
+    while(N--){
+        scanf("%s %d", TempID, &TempWaktuTunggu);
         PushBack(TempWaktuTunggu, TempID);
-        i++;
     }
 
     printf("ORDER ");
     Display();
 
     WaktuTungguTotal = HitungWaktuTotal();
+    printf("\n");
     printf("WAIT ");
     printf("%d", WaktuTungguTotal);
 
